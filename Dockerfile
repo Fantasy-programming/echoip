@@ -16,4 +16,4 @@ COPY html /opt/echoip/html
 COPY data /opt/echoip/data
 
 WORKDIR /opt/echoip
-ENTRYPOINT ["/opt/echoip/echoip"]
+ENTRYPOINT ["/opt/echoip/echoip", "-a", "./data/GeoLite2-ASN.mmdb", "-f", "./data/GeoLite2-Country.mmdb", "-c", "./data/GeoLite2-City.mmdb"]
